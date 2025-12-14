@@ -33,7 +33,15 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/about',(req,res)=>{
-      res.render('about.hbs');
+      res.render('about.hbs',{
+        pageTitle:"About Page"
+      });
+});
+
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle:"Prjoects"
+    })
 });
 
 app.get('/bad',(req,res)=>{
